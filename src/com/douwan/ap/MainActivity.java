@@ -275,7 +275,6 @@ public class MainActivity extends Activity {
         		sendScanWifiBroadcast();
         		break;
         	case "cannetwork":
-        		Log.i("debug.info","a..........................");
         		canNetwork(intent);
         		break;
         	case "processPortFail":
@@ -328,9 +327,7 @@ public class MainActivity extends Activity {
 	
 	public void scanWifi(Intent intent)
 	{
-		Log.i("debug.info","b..........................");
 		String tag = intent.getExtras().getString("tag");
-		Log.i("debug.info","c..........................");
 		Toast.makeText(MainActivity.this,tag, Toast.LENGTH_SHORT).show();
 	}
 	

@@ -90,6 +90,7 @@ public class WifiService extends Service {
 					break;
 				case CAN_NETWORK:
 					processCanNetwork(it);
+					break;
 				case START_BROW:
 					processStartBrow(it,msg.obj.toString());
 					break;
