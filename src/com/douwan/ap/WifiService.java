@@ -144,7 +144,6 @@ public class WifiService extends Service {
 	{
 		it.putExtra("wifiservice","scanwifi");
 		it.putExtra("tag", tag);
-		Log.i("debug.info", "tag:"+tag);
 		Log.i("debug.info", "sendBroadcast:scanwifi...");
 		sendBroadcast(it);
 	}
@@ -208,7 +207,6 @@ public class WifiService extends Service {
         intentFilter.addAction("com.douwan.ap.mainActivity");
         registerReceiver(msgReceiver, intentFilter);
 	}
-	
 	public class MsgReceiver extends BroadcastReceiver{  
 		  
         @Override  
@@ -396,14 +394,14 @@ public class WifiService extends Service {
 		        if(m.toString().contains("<TITLE>Success</TITLE>"))
 				{
 					Log.i("debug.info","访问IOS网站返回Succeed！");
-					/*tag = "设备可以上网了,请重置!";
+					tag = "设备可以上网了,请重置!";
 					Message message = new Message();
 					message.what = CAN_NETWORK;
-					myHandler.sendMessage(message);*/
-					if(startBrows(uri) == true)
+					myHandler.sendMessage(message);
+					/*if(startBrows(uri) == true)
 		    		{
 		    			Log.i("debug.info","start brows...");
-		    		}
+		    		}*/
 					
 					return;
 				}
